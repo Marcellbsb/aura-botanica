@@ -1,0 +1,43 @@
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+
+
+
+/* Reset e estilos básicos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  color: #2d5a3d;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Cores temáticas */
+:root {
+  --primary: #2d5a3d;
+  --primary-light: #3a6b4a;
+  --secondary: #a8e6cf;
+  --accent: #ff6b6b;
+  --light: #f5f5f5;
+  --dark: #333;
+}

@@ -83,20 +83,27 @@
 .plants-carousel-container {
   position: relative;
   margin: 0 auto;
-  width: 100%;
   max-width: 1200px;
+  overflow: hidden;
 }
 
+.plants-viewport {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
 
 .plants-slide {
   display: flex;
   transition: transform 0.5s ease;
+  will-change: transform;
 }
 
 
 /* Garante que o container não fique branco */
 .plants-carousel {
-  min-height: 300px; /* Ajuste conforme necessário */
+  width: 100%; /* Ajuste conforme necessário */
+  overflow: hidden;
   position: relative;
 }
 
@@ -109,10 +116,14 @@
 
 /* Garante que os cards tenham tamanho consistente */
 .plant-card {
-  flex: 0 0 calc(100% / 3 - 20px);
+  flex: 0 0 calc(100% / 5 - 20px);
   margin: 0 10px;
   min-width: 0;
   box-sizing: border-box;
+}
+.plants-slide-wrapper {
+  width: 100%;
+  overflow: hidden;
 }
 
 /* Correção para transform translateX */
@@ -211,3 +222,17 @@
       height: 35px;
     }
   }
+
+  
+/* Ajuste para diferentes tamanhos de tela */
+@media (max-width: 992px) {
+  .plant-card-wrapper {
+    flex: 0 0 50%; /* Mostra 2 cards por vez em tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .plant-card-wrapper {
+    flex: 0 0 100%; /* Mostra 1 card por vez em mobile */
+  }
+}
